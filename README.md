@@ -1,6 +1,8 @@
 # BinarySearchTree
 Binary Search Tree created with Generics. The generic type is upperbounded by the Comparable interface so it can be used with any <br />
-object that implements that interface. 
+object that implements that interface.  <br />
+
+Binary search trees are data structures that are useful for sorting a set of data, they implement sorting and traversal algorithms. Balanced binary search trees are excellent tools for quick insertion and retreival of elements and that's the end goal of this project. 
 
 ## Work in progress
 
