@@ -1,4 +1,4 @@
-package com.unitedhuskies.binarytree;
+package com.nicholasDaily.binarysearchtree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,7 @@ public class BinarySearchTree<E extends Comparable> {
         private Node<E> leftNode;
         private Node<E> rightNode;
         private int size = 0;
+        //code (getters, setters, constructor)
         Node(){
 
         }
@@ -93,6 +94,8 @@ public class BinarySearchTree<E extends Comparable> {
         }
     }
 
+    public void add(List<E> valueList){ valueList.forEach(this::add); }
+
     private void add(E element, Node node, Node nodeParent){
         E nodeValue = (E) node.getValue();
         if(nodeValue == null) {
@@ -129,13 +132,12 @@ public class BinarySearchTree<E extends Comparable> {
         return this.rootNode.size();
     }
 
-    public List getSortedListAsc() {
-        List list = new ArrayList();
-        return getSortedList(rootNode, list, true);
+    public List<E> getSortedListAsc() {
+        return getSortedList(rootNode, new ArrayList<E>(), true);
     }
 
-    public List getSortedListDesc() {
-        return getSortedList(rootNode, new ArrayList(), false);
+    public List<E> getSortedListDesc() {
+        return getSortedList(rootNode, new ArrayList<E>(), false);
     }
 
     private List getSortedList(Node<E> node, List list, boolean ascending){
